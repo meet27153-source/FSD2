@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <h1 id="temp"></h1>
+    <h1 id="temp1"></h1>
+    <script>
+        // setTimeout(myfun,5000)
+        // function myfun(){
+        //     document.getElementById("temp").innerHTML="Callback Function"
+        // }
+
+        let x=2,y=3
+        setInterval(() => {
+           document.getElementById("temp").innerHTML=++x + ++y 
+        },1000)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

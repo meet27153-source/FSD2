@@ -1,0 +1,7 @@
+var fs=require("fs")
+var r=fs.readFileSync("B61.txt","utf-8")
+var b=fs.appendFileSync("B61.txt","\nNew Data Added")
+console.log(b)
+// fs.unlinkSync("B62.txt")
+fs.copyFileSync("B61.txt","B63.txt")
+fs.renameSync("B63.txt","new.txt")

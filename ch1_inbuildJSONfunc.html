@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+//         var obj='{"name":"abc", "marks":24}'
+//         document.write(obj)
+//         var s=JSON.stringify(obj)
+//         document.write(s)
+//         document.write(s.name)
+//         var p=JSON.parse(obj)
+//         document.write(p.name)
+//         obj.age=25
+//         document.write(obj)
+
+//         const a = {
+//             "A" : "LJU",
+//             "B" : ["CSE", "IT" , "CE"],
+//             "C" : [
+//                     {
+//                         "D" : "Hi",
+//                         "E" : ['are', 4, {'F' : ['semester', 'We']} ]
+//                     }
+//                   ],
+//             "G" : {
+//                     "H" : "students",
+//                     "I" : ["of","!"]
+//                   },
+//             "J" : [{"K" :"Python", "L":"branch"},"FSD-2"]
+// }
+//     console.log(a.C[0].D, a.G.I[1] + " " + a.C[0].E[2].F[1] + " " + a.C[0].E[0] + " " + a.G.H + " " + a.G.I[0] + " " + a.C[0].E[2].F[0] 
+//     + " " + a.C[0].E[1] + " " + a.G.I[0] + " " + a.B[0] + " " + a.J[0].L)
+
+//    var test1 = {
+//     "division1": {
+//         "name":["Z","B","H"]
+//     },
+//     "division2": {
+//         "name" :["Y","A","G"]
+//     }
+// }
+//     console.log(test1.division1.name.concat(test1.division2.name).sort())
+    function o(){
+        var obj1='{"name":"xyz","dob":"2000-01-10","city":"Rajkot"}'
+        var o1=JSON.parse(obj1)
+        document.getElementById("a").innerHTML="Welcome "+o1.name+"<br> City: "+o1.city
+        document.getElementById("b").innerHTML=new Date(o1.dob)
+    }
+
+    var emp=[{"name":"ABC","age":30},{"name":"xyz","age":52},{"name":"pqr","age":43}]
+    var e=emp.sort((a,b)=>b.age-a.age)
+    for(i of e){
+        document.writeln(i.name+ " " +i.age +"<br>")
+    }
+    document.write("Highest age of Employee:"+emp[0].name)
+
+    var a=["pqr","mno","xyz","abc","def"]
+    function f1(x){
+        var temp={}
+        temp[x[1]]=x[x.length-1]
+        document.write(JSON.stringify(temp))
+    }
+    f1(a)
+
+    var a1={"FSD":[
+        {"Topic":"JSON","Phase":"T1"},{"Topic":"Express","Phase":"T2"}
+    ]}
+
+    document.write(`<table border="1">
+            <tr><th>Topic</th>
+                <th>Phase</th>
+            </tr>
+            <tr><td>${a1.FSD[0].Topic}</td>
+                <td>${a1.FSD[0].Phase}</td>
+            </tr>
+            <tr><td>${a1.FSD[1].Topic}</td>
+                <td>${a1.FSD[1].Phase}</td>
+            </tr>
+        </table>`)
+        
+    </script>
+    
+</head>
+<body>
+    <button onclick="o()">Click Here</button>
+    <h3 id="a"></h3>
+    <h4 id="b"></h4>
+    
+</body>
+</html>

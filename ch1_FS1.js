@@ -1,0 +1,5 @@
+var fs=require("fs")
+var e=fs.writeFileSync("B61.txt","Hello!Good Morning","utf-8")
+var e1=fs.writeFileSync("B62.txt","Hello!Good Morning","utf-8")
+console.log(e)
+console.log(e1)
